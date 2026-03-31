@@ -1,3 +1,5 @@
+using System.ComponentModel;
+
 class Produit
 {
     private string codeArticle;
@@ -32,5 +34,9 @@ class Produit
             return this.codeArticle == autre.codeArticle;
         }
         return false;
+    }
+    public override int GetHashCode()
+    {
+        return codeArticle.GetHashCode();
     }
 }
